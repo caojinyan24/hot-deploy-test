@@ -1,5 +1,6 @@
 package swa.service.impl;
 
+import com.google.common.collect.Maps;
 import org.springframework.stereotype.Service;
 import swa.annotation.ValueSetter;
 import swa.service.DataLoaderService;
@@ -11,11 +12,11 @@ import java.util.Map;
  */
 @Service
 public class DataLoaderServiceImpl implements DataLoaderService {
-    @ValueSetter("test.properties")
-    private Map<String, String> fieldVaule;
+    @ValueSetter("filename.properties")
+    private Map<String, String> fieldValue = Maps.newHashMap();
 
-    public void print() {
-        System.out.println("##############");
-        System.out.println(fieldVaule);
+    public String getValue(String key) {
+        System.out.println("fieldValue:" + fieldValue);
+        return fieldValue.get(key);
     }
 }
