@@ -12,7 +12,7 @@ import java.util.Map;
  */
 @Service
 public class DataLoaderServiceImpl implements DataLoaderService {
-    @ValueSetter("filename.properties")
+    @ValueSetter("fileName.properties")
     private Map<String, String> fieldValue = Maps.newHashMap();
 
     public String getValue(String key) {
