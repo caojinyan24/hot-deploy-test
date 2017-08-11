@@ -18,7 +18,6 @@ public class DataLoaderController {
 
     @RequestMapping("load")
     public ModelAndView index() {
-        System.out.println("index request");
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("value", dataLoaderService.getValue("testKey"));
         return modelAndView;
