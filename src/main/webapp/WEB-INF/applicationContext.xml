@@ -2,14 +2,19 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:valueSetter="http://localhost/schema/valueSetter"
+       xmlns:JobSchedule="http://localhost/schema/JobSchedule"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd
         http://localhost/schema/valueSetter
-        http://localhost/schema/valueSetter.xsd ">
+        http://localhost/schema/valueSetter.xsd
+        http://localhost/schema/JobSchedule
+        http://localhost/schema/JobSchedule.xsd
+        ">
     <context:component-scan base-package="swa.service"/>
     <context:annotation-config/>
     <valueSetter:annotation-driven/>
+    <JobSchedule:config appName="hot-deploy" port="8080"/>
 </beans>

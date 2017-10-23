@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import org.springframework.stereotype.Service;
 import swa.annotation.ValueSetter;
 import swa.service.DataLoaderService;
+import swa.spring.JobSchedule;
 
 import java.util.Map;
 
@@ -19,4 +20,10 @@ public class DataLoaderServiceImpl implements DataLoaderService {
         System.out.println("fieldValue:" + fieldValue);
         return fieldValue.get(key);
     }
+    @JobSchedule(jobName="hot.deploy.test")
+    public void scheduleTest(String param){
+        System.out.println("ooh! i've got to work");
+    }
+
+
 }
