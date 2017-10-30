@@ -13,8 +13,9 @@
         http://localhost/schema/JobSchedule
         http://localhost/schema/JobSchedule.xsd
         ">
+
     <context:component-scan base-package="swa.service"/>
     <context:annotation-config/>
     <valueSetter:annotation-driven/>
-    <JobSchedule:config appName="hot-deploy" port="8080"/>
+    <JobSchedule:config appName="hot-deploy" port="8089"/>
 </beans>

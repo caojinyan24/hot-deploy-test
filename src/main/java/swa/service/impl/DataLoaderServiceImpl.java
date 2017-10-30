@@ -21,7 +21,7 @@ public class DataLoaderServiceImpl implements DataLoaderService {
         return fieldValue.get(key);
     }
     @JobSchedule(jobName="hot.deploy.test")
-    public void scheduleTest(String param){
+    public void scheduleTest(){
         System.out.println("ooh! i've got to work");
     }
 
