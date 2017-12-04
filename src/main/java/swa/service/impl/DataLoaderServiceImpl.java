@@ -2,6 +2,7 @@ package swa.service.impl;
 
 import com.google.common.collect.Maps;
 import org.springframework.stereotype.Service;
+import swa.annotation.ValueSetter;
 import swa.service.DataLoaderService;
 import swa.spring.JobSchedule;
 
@@ -12,7 +13,7 @@ import java.util.Map;
  */
 @Service
 public class DataLoaderServiceImpl implements DataLoaderService {
-//    @ValueSetter("fileName.properties")
+    @ValueSetter("fileName.properties")
     private Map<String, String> fieldValue = Maps.newHashMap();
 
     public String getValue(String key) {
